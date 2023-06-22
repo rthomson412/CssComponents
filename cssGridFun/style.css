@@ -96,6 +96,8 @@ header p {
 
 .panel:nth-child(3) {
     color: #000;
+    text-align: right;
+    padding-top: 7em;
   background: url(https://images.unsplash.com/photo-1557492663-32db40152a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
 }
 
