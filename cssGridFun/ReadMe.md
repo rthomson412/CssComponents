@@ -1,1 +1,1 @@
-## Responsive CSS grid layout
+# Responsive CSS grid layout
