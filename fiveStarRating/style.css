@@ -1,0 +1,114 @@
+
+  
+  body {
+  font-family: sans-serif;
+  --s: 200px; /* control the size */
+  --c1: #FF847C;
+  --c2: #ac3b61;
+  --c3: #FECEA8;
+  --c4: #99B898;
+  
+  background:
+    conic-gradient(from  45deg at 75% 75%, var(--c3) 90deg,var(--c1) 0 180deg,#0000 0),
+    conic-gradient(from -45deg at 25% 25%, var(--c3) 90deg,#0000 0),
+    conic-gradient(from -45deg at 50% 100%,#0000 180deg,var(--c3) 0),
+    conic-gradient(from -45deg,var(--c1) 90deg, var(--c2) 0 225deg,var(--c4) 0);
+  background-size: var(--s) var(--s); 
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.rating {
+  background: #edc7b7;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0.5em 2em 2em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  border-radius: 1em;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+}
+
+.big-star {
+    
+    color: #ac3b61;
+  font-size: 5em;
+  position: relative;
+  padding: 0 0 2em 0;
+}
+
+.big-star i {
+  transition: 0.3s;
+}
+
+.big-star i,
+.selected-rating {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.selected-rating {
+    color: #FECEA8;
+  margin: 0;
+  font-size: 0.5em;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.star {
+  cursor: pointer;
+  padding: 0 10px;
+  font-size: 24px;
+  color: #eee2dc;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.selected,
+.star:hover {
+  color: #99B898;
+  transform: scale(1.1);
+}
+
+.feedback-message {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.2s;
+}
+
+.feedback-message p {
+  color: #123c69;
+}
+
+.rating button {
+  display: block;
+  color: #fff;
+  background: #99B898;
+  border-radius: 8px;
+  padding: 0.8em;
+  width: 50%;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  display: none;
+}
+
+.rating button:hover {
+  background: #ac3b61;
+}
