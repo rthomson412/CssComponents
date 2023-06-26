@@ -1,0 +1,137 @@
+body {
+  font-family: sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  --s: 120px; /* control the size*/
+
+  --_g: radial-gradient(#0000 70%, #1a2030 71%);
+  background: var(--_g), var(--_g) calc(var(--s) / 2) calc(var(--s) / 2),
+    conic-gradient(#0f9177 25%, #fdebad 0 50%, #d34434 0 75%, #b5d999 0);
+  background-size: var(--s) var(--s);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(34, 34, 34, 0.37);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 5px;
+  border: 1px rgba(255, 255, 255, 0.18) solid;
+}
+
+.sidebar .container {
+  padding: 2em;
+  height: 100vh;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #fdebad;
+}
+
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+.sidebar .logo img {
+  width: 2em;
+}
+
+.sidebar .logo span {
+  font-weight: bold;
+}
+
+.sidebar .navigation {
+  margin: 1em 0 2em 0;
+  padding: 1.5em 0 1em 0;
+  border-top: 1px #b5d999 solid;
+  border-bottom: 1px #b5d999 solid;
+}
+
+.sidebar .menu {
+  padding-top: 0.5em;
+  list-style: none;
+}
+
+.sidebar h6 {
+  text-transform: uppercase;
+  color: #fdebad;
+}
+
+.sidebar .menu li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  align-items: center;
+  padding: 1em 0;
+}
+
+.sidebar .menu a {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  transition: 0.3s;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #fdebad;
+}
+
+.sidebar .menu a:hover {
+  color: #b5d999;
+}
+
+.sidebar .active-tag {
+  background-color: #b5d999;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0f9177;
+  font-weight: bold;
+  font-size: 0.8em;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 850px) {
+  .sidebar .container {
+    padding: 2em 1em;
+  }
+  .sidebar .logo img {
+    margin: 0 auto;
+  }
+  .sidebar .profile {
+    justify-content: center;
+  }
+  .sidebar .menu li {
+    justify-content: center;
+    position: relative;
+  }
+  .sidebar .menu a,
+  .sidebar h6 {
+    text-align: center;
+  }
+  .sidebar .logo span {
+    display: none;
+  }
+  .sidebar .menu li a span:nth-child(2) {
+    display: none;
+  }
+  .sidebar .active-tag {
+    display: none;
+  }
+}
