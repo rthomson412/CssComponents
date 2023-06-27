@@ -1,0 +1,138 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap');
+  
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    --s: 100px; /* control the size */
+    --c1: #fdebd4;
+    --c2: #c0a18f;
+    
+    --_l:#0000 calc(25%/3),var(--c1) 0 25%,#0000 0;
+    --_g:conic-gradient(from 120deg at 50% 87.5%,var(--c1) 120deg,#0000 0);
+    background:
+      var(--_g),var(--_g) 0 calc(var(--s)/2),
+      conic-gradient(from 180deg at 75%,var(--c2) 60deg,#0000 0),
+      conic-gradient(from 60deg at 75% 75%,var(--c1) 0 60deg,#0000 0),
+      linear-gradient(150deg,var(--_l)) 0 calc(var(--s)/2),
+      conic-gradient(at 25% 25%,#0000 50%,var(--c2) 0 240deg,var(--c1) 0 300deg,var(--c2) 0),
+      linear-gradient(-150deg,var(--_l)) #E08E79 /* third color here */;
+    background-size: calc(0.866*var(--s)) var(--s);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+      
+      
+  }
+  
+  .details-menu {
+    padding: 1em;
+    width: 90%;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    color: #000;  
+  }
+  
+  .detail-item {
+   
+    padding: 0.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: color 50ms;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .detail-title, .detail-title > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+  
+  .detail-title i {
+    color: #000;
+  }
+  
+  .detail-title > div i {
+    font-size: 1em;
+  }
+  
+  .detail-btn {
+    background: none;
+    border: none;
+    font-size: 0.5em;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /*Animate from 0 to auto height 
+  using CSS grid trick*/
+  .details {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 200ms ease-in-out;
+  }
+  
+  .details > div {
+    margin-top: 0;
+    overflow: hidden;
+    transition: margin-top 300ms;
+  }
+  
+  .details p {
+    line-height: 25px;
+    font-size: 0.9em;
+  }
+  
+  .details p:not(.details p:last-child) {
+    margin-bottom: 1em;
+  }
+  
+  /*Dynamic classes for Javascript*/
+  .details-open {
+    grid-template-rows: 1fr;
+  }
+  
+  .details-open > div {
+    margin-top: 1.5em;
+  }
+  
+  .detail-item-active {
+    --s: 700px; /* control the size */
+    --c1: #ad987c;
+    --c2: #f09764;
+    
+    --_l:#0000 calc(25%/3),var(--c1) 0 25%,#0000 0;
+    --_g:conic-gradient(from 120deg at 50% 87.5%,var(--c1) 120deg,#0000 0);
+    background:
+      var(--_g),var(--_g) 0 calc(var(--s)/2),
+      conic-gradient(from 180deg at 75%,var(--c2) 60deg,#0000 0),
+      conic-gradient(from 60deg at 75% 75%,var(--c1) 0 60deg,#0000 0),
+      linear-gradient(150deg,var(--_l)) 0 calc(var(--s)/2),
+      conic-gradient(at 25% 25%,#0000 50%,var(--c2) 0 240deg,var(--c1) 0 300deg,var(--c2) 0),
+      linear-gradient(-150deg,var(--_l)) #E08E79 /* third color here */;
+    background-size: calc(0.866*var(--s)) var(--s);
+    color: #000;
+  }
+  
+  .detail-item-active .detail-title i {
+    color: #000;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .detail-title h3 {
+      font-size: 1em;
+    }
+  }
