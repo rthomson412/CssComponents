@@ -11,8 +11,8 @@ body {
   header {
     min-height: 100vh;
     padding: 1em;
-    background-image: 
-      url(https://source.unsplash.com/9SoCnyQmkzI/1600x900);
+    background-image: url(./about.webp);
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,7 +25,7 @@ body {
   
   header::before {
     content: "";
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 0; left: 0;
     width: 100%;
