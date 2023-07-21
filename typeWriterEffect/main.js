@@ -32,7 +32,7 @@ const colors = [
 const backgrounds = [
   "./hero.webp",
   "./tech.webp",
-  "./intouch.webp"
+  "./apps.webp"
 ];
 
 //Ammount of letters
