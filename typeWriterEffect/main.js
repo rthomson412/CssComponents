@@ -23,9 +23,9 @@ const words = [
 
 //Colors for the individual words
 const colors = [
-  "#4069ff",
-  "#eb4034",
-  "Orange",
+  "#3e8bff65",
+  "#ff923e65",
+  "#3eff5b9b",
 ];
 
 //Bacground Images
