@@ -7,9 +7,9 @@ const header = document.querySelector("header");
 //Result
 let res;
 //Typing Speed
-let typeSpeed = 300;
+let typeSpeed = 100;
 //Removing/Backspace Speed
-let removeSpeed = 100;
+let removeSpeed = 200;
 //Word Identifier
 let id = 0;
 
@@ -39,7 +39,7 @@ const backgrounds = [
 let charCount = 0;
 
 //Time to pause each word
-const pauseTime = 10;
+const pauseTime = 8;
 
 //Set initial interval on the type function
 let time = setInterval(type, typeSpeed);
